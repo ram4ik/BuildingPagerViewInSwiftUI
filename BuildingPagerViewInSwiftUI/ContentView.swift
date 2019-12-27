@@ -9,8 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var currentPage = 0
+
     var body: some View {
-        Text("Hello, World!")
+        PagerView(pageCount: 3, currentIndex: $currentPage) {
+            Color.blue
+            Color.red
+            Color.green
+        }
     }
 }
 
